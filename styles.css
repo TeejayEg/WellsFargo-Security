@@ -3,11 +3,14 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #fff;
+  color: #333;
 }
 
 .container {
-  width: 80%;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 /* Header Styles */
@@ -15,27 +18,28 @@ header {
   background-color: #d32109;
   color: #fff;
   padding: 20px 0;
+  text-align: center;
 }
 
 header .logo img {
-  height: 40px;
+  height: 40px; /* Kept height consistent */
 }
 
 header nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  text-align: center;
 }
 
 header ul li {
   display: inline-block;
-  margin: 0 10px;
+  margin: 0 15px;
 }
 
 header nav ul li a {
   color: white;
   text-decoration: none;
+  font-weight: bold;
 }
 
 header nav ul li a:hover {
@@ -44,46 +48,68 @@ header nav ul li a:hover {
 
 header .cta {
   float: right;
+  margin-top: -45px; /* Align for larger screens */
+}
+
+header .btn {
+  background-color: #e0cb0a;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+header .btn:hover {
+  background-color: #bdba38;
 }
 
 /* Main Styles */
 main {
-  padding: 20px 0;
+  padding: 40px 0;
 }
 
-.image{
-  width: 1100px;
+.image {
+  width: 100%;
+  max-width: 1100px;
   height: 400px;
+  object-fit: cover; /* Ensures proper fit */
   border-radius: 10px;
 }
 
-.image1{
-  width: 1000px;
+.image1 {
+  width: 100%;
+  max-width: 1000px;
   height: 500px;
+  object-fit: cover;
   border-radius: 10px;
 }
 
-.image2{
-  width: 1100px;
+.image2 {
+  width: 100%;
+  max-width: 1100px;
   height: 400px;
+  object-fit: cover;
   border-radius: 10px;
 }
 
+/* Floating Box Styles */
 .floating-box {
   background-color: #f9f9f9;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 40px 70px rgba(0, 0, 0, 0.1);
-  margin-top: 20px;
-  width: 300px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 350px;
+  text-align: center;
 }
 
 .floating-box h3 {
-  margin: 0;
+  font-size: 1.5em;
+  margin-top: 0;
 }
 
 .floating-box .btn {
-  display: block;
   margin-top: 10px;
   width: 85px;
 }
@@ -94,12 +120,12 @@ main {
   border-radius: 10px;
   box-shadow: 0 40px 70px rgba(0, 0, 0, 0.1);
   margin-top: 50px;
-  width: 1000px;
-  max-width: 1500px;
+  max-width: 1200px; /* Set max-width for consistency */
 }
 
 .floating-box p {
-  margin-top: 0;
+  font-size: 1.1em;
+  color: #555;
 }
 
 .section {
@@ -126,7 +152,6 @@ form {
   padding: 30px;
   border-radius: 30px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  width: 65%;
   max-width: 800px;
   margin: 0 auto;
 }
@@ -179,6 +204,7 @@ footer {
   color: #333;
   padding: 20px 0;
   text-align: center;
+  clear: both;
 }
 
 footer .left {
@@ -187,4 +213,69 @@ footer .left {
 
 footer .right {
   float: right;
+}
+
+/* Responsive Styles */
+
+/* Tablets (max-width: 768px) */
+@media (max-width: 768px) {
+  header .logo img {
+    height: 30px;
+  }
+
+  header .cta {
+    float: none;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  header ul li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .floating-box {
+    max-width: 90%; /* Adjust for smaller screens */
+    padding: 15px;
+  }
+
+  .floating-box1 {
+    width: 100%;
+  }
+
+  footer .left,
+  footer .right {
+    float: none;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+  header .logo img {
+    height: 25px;
+  }
+
+  header ul li {
+    margin: 5px 0;
+  }
+
+  .image,
+  .image1,
+  .image2 {
+    width: 100%;
+    height: auto;
+  }
+
+  .floating-box,
+  .floating-box1 {
+    padding: 15px;
+    width: 100%;
+  }
+
+  footer .left,
+  footer .right {
+    text-align: center;
+  }
 }
