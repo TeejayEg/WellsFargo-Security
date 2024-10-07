@@ -23,10 +23,6 @@ header {
   align-items: center;
 }
 
-header .logo {
-  float: left;
-}
-
 header .logo img {
   height: 40px; /* Larger size for desktop */
 }
