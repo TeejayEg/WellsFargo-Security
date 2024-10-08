@@ -18,11 +18,10 @@ header {
   background-color: #d32109;
   color: #fff;
   padding: 20px 0;
-  text-align: center;
 }
 
 header .logo img {
-  height: 30px; /* Kept height consistent */
+  height: 30px; /* Larger size for desktop */
 }
 
 header nav ul {
@@ -34,7 +33,7 @@ header nav ul {
 
 header ul li {
   display: inline-block;
-  margin: 0 10px;
+  margin: 0 15px;
 }
 
 header nav ul li a {
@@ -49,7 +48,7 @@ header nav ul li a:hover {
 
 header .cta {
   float: right;
-  margin-top: -45px; /* Align for larger screens */
+  margin-top: -45px; /* Aligns button to right on desktop */
 }
 
 header .btn {
