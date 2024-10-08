@@ -108,11 +108,26 @@ main {
 .floating-box h3 {
   font-size: 1.5em;
   margin-top: 0;
+  margin-bottom: 15px;
 }
 
-.floating-box .btn {
-  margin-top: 10px;
-  width: 85px;
+.floating-box p {
+  font-size: 1.1em;
+  color: #555;
+}
+
+.floating-box a.btn {
+  display: inline-block;
+  background-color: #e0cb0a;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.floating-box a.btn:hover {
+  background-color: #bdba38;
 }
 
 .floating-box1 {
